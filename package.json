@@ -1,0 +1,36 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon",
+    "start": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/William-Ryan/portfolio-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/William-Ryan/portfolio-backend/issues"
+  },
+  "homepage": "https://github.com/William-Ryan/portfolio-backend#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.13",
+    "pg": "^8.0.0",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "jest": "^25.2.6",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
