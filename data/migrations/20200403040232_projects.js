@@ -4,11 +4,13 @@ exports.up = function(knex) {
 
         tbl.string('title', 100).notNullable();
 
-        tbl.text('image', 2000).notNullable();
+        tbl.text('image').notNullable();
 
         tbl.text('description').notNullable();
 
-        tbl.text('skills').notNullable()
+        tbl.text('skills').notNullable();
+
+        tbl.text('link').notNullable();
     })
 };
 
