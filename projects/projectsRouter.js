@@ -1,3 +1,4 @@
+const restricted = require('../auth/restricted-middleware.js')
 const express = require('express');
 
 const Project = require('./projectsModel.js')
@@ -15,7 +16,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.post('/', (req, res) => {
+router.post('/', restricted, (req, res) => {
     const projectData = req.body;
 
     Project.add(projectData)
@@ -27,7 +28,7 @@ router.post('/', (req, res) => {
     })
 })
 
-router.put('/:id', (req, res) => {
+router.put('/:id', restricted, (req, res) => {
     const { id } = req.params;
     const changes = req.body;
 
@@ -47,7 +48,7 @@ router.put('/:id', (req, res) => {
     })
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', restricted, (req, res) => {
     const { id } = req.params;
 
     Project.remove(id)
