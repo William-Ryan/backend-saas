@@ -27,4 +27,24 @@ router.post('/', (req, res) => {
     })
 })
 
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+    const changes = req.body;
+
+    Project.findById(id)
+    .then(project => {
+        if (project){
+            Project.update(changes, id)
+            .then(updatedProject => {
+                res.status(200).json(updatedProject)
+            });
+        } else {
+            res.status(404).json({ message: 'Could not find this given Project' })
+        }
+    })
+    .catch(() => {
+        res.status(500).json({ message: 'Failed to update Project' })
+    })
+})
+
 module.exports = router
