@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon",
-    "start": "node",
+    "start": "node index.js",
     "test": "jest --watch"
   },
   "repository": {
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/William-Ryan/portfolio-backend.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "William-Ryan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/William-Ryan/portfolio-backend/issues"
